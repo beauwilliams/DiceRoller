@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/bg"
-        android:layout_width="420dp"
-        android:layout_height="730dp"
-        android:contentDescription="@string/bg_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/dsc_macquarie_university_light_vertical_logo_square" />
-
     <TextView
         android:id="@+id/prompt"
         android:layout_width="wrap_content"
@@ -29,26 +16,28 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.227" />
+        app:layout_constraintVertical_bias="0.375" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="323dp"
-        android:layout_marginEnd="161dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="200dp"
         android:layout_marginBottom="179dp"
         android:text="@string/roll_the_dice"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prompt" />
+        app:layout_constraintTop_toBottomOf="@+id/prompt"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="106dp"
-        android:layout_height="144dp"
+        android:layout_width="119dp"
+        android:layout_height="122dp"
         android:layout_marginTop="150dp"
         android:textAlignment="center"
         android:textSize="100sp"
@@ -59,5 +48,38 @@
         app:layout_constraintTop_toTopOf="@+id/button"
         app:layout_constraintVertical_bias="0.373"
         tools:text="1" />
+
+    <TextView
+        android:id="@+id/luckyResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        tools:text="Test text goes here" />
+
+    <ImageView
+        android:id="@+id/dice"
+        android:layout_width="216dp"
+        android:layout_height="191dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/image_of_some_dice"
+        app:layout_constraintBottom_toTopOf="@+id/prompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice" />
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/a_background_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dsc_macquarie_university_light_vertical_logo_square" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

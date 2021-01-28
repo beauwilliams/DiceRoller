@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Dice Roller</string>
-    <string name="hey_there_check_out_our_dice_roller">Hey there, check out our dice roller</string>
+    <string name="hey_there_check_out_our_dice_roller">Hey there, check out our dice roller demo app!</string>
     <string name="roll_the_dice">Roll the dice!</string>
     <string name="bg_image">bg image</string>
+    <string name="image_of_some_dice">Image of some dice</string>
+    <string name="a_background_image">A background image</string>
 </resources>

@@ -23,9 +23,22 @@ class MainActivity : AppCompatActivity() {
      */
     private fun rollDice() {
         val dice = Dice(6)
+        val luckyNumber = 4
         val diceRoll = dice.roll()
         val resultTextView: TextView = findViewById(R.id.result)
         resultTextView.text = diceRoll.toString()
+
+        val luckyTextView: TextView = findViewById(R.id.luckyResult)
+        when (diceRoll) {
+            luckyNumber -> luckyTextView.text =  "You won!"
+            1 -> luckyTextView.text =  "So sorry! You rolled a 1. Try again!"
+            2 -> luckyTextView.text =  "Sadly, you rolled a 2. Try again!"
+            3 -> luckyTextView.text =  "Unfortunately, you rolled a 3. Try again!"
+            4 -> luckyTextView.text =  "No luck! You rolled a 4. Try again!"
+            5 -> luckyTextView.text =  "Don't cry! You rolled a 5. Try again!"
+            6 -> luckyTextView.text =  "Apologies! you rolled a 6. Try again!"
+        }
+
     }
 }
 
@@ -35,7 +48,6 @@ class MainActivity : AppCompatActivity() {
  *  This class will roll the dice for us
  */
 class Dice(val numSides: Int) {
-
     fun roll(): Int {
         return (1..numSides).random()
     }
