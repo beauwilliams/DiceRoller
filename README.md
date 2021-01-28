@@ -1,3 +1,3 @@
 # Dice Roller - Demonstration Android App
 
-![image](https://i.ibb.co/Ws3ms47/Screenshot-20210128-182735.png)
+![image](https://i.ibb.co/FgJHGTC/Screenshot-20210128-185342.png)
