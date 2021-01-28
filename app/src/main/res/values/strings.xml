@@ -5,4 +5,11 @@
     <string name="bg_image">bg image</string>
     <string name="image_of_some_dice">Image of some dice</string>
     <string name="a_background_image">A background image</string>
+    <string name="result_success">You won!</string>
+    <string name="result_fail_1">So sorry! You rolled a 1. Try again!</string>
+    <string name="result_fail_2">Sadly, you rolled a 2. Try again!</string>
+    <string name="result_fail_3">Unfortunately, you rolled a 3. Try again!</string>
+    <string name="result_fail_5">Don\'t cry! You rolled a 5. Try again!</string>
+    <string name="result_fail_4">No luck! You rolled a 4. Try again!</string>
+    <string name="result_fail_6">Apologies! you rolled a 6. Try again!</string>
 </resources>

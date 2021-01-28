@@ -3,6 +3,7 @@ package com.hello.diceroller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -23,21 +24,40 @@ class MainActivity : AppCompatActivity() {
      */
     private fun rollDice() {
         val dice = Dice(6)
-        val luckyNumber = 4
+        val luckyNumber = (1..dice.numSides).random()
         val diceRoll = dice.roll()
         val resultTextView: TextView = findViewById(R.id.result)
         resultTextView.text = diceRoll.toString()
 
         val luckyTextView: TextView = findViewById(R.id.luckyResult)
         when (diceRoll) {
-            luckyNumber -> luckyTextView.text =  "You won!"
-            1 -> luckyTextView.text =  "So sorry! You rolled a 1. Try again!"
-            2 -> luckyTextView.text =  "Sadly, you rolled a 2. Try again!"
-            3 -> luckyTextView.text =  "Unfortunately, you rolled a 3. Try again!"
-            4 -> luckyTextView.text =  "No luck! You rolled a 4. Try again!"
-            5 -> luckyTextView.text =  "Don't cry! You rolled a 5. Try again!"
-            6 -> luckyTextView.text =  "Apologies! you rolled a 6. Try again!"
+            luckyNumber -> luckyTextView.text =  getString(R.string.result_success)
+            1 -> luckyTextView.text =  getString(R.string.result_fail_1)
+            2 -> luckyTextView.text =  getString(R.string.result_fail_2)
+            3 -> luckyTextView.text =  getString(R.string.result_fail_3)
+            4 -> luckyTextView.text =  getString(R.string.result_fail_4)
+            5 -> luckyTextView.text =  getString(R.string.result_fail_5)
+            6 -> luckyTextView.text =  getString(R.string.result_fail_6)
         }
+
+        // Find the ImageView in the layout
+        val diceImage: ImageView = findViewById(R.id.diceImage)
+
+        // Determine which drawable resource ID to use based on the dice roll
+        val drawableResource = when (diceRoll) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+
+        // Update the ImageView with the correct drawable resource ID
+        diceImage.setImageResource(drawableResource)
+
+        // Update the content description
+        diceImage.contentDescription = diceRoll.toString()
 
     }
 }
