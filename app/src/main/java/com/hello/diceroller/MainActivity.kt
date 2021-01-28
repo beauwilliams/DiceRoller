@@ -6,6 +6,9 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 
+/**
+ *  This class is the main activity in our app
+ */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 }
 
 
+
+/**
+ *  This class will roll the dice for us
+ */
 class Dice(val numSides: Int) {
 
     fun roll(): Int {
